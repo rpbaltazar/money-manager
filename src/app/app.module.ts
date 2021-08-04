@@ -9,11 +9,14 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatDividerModule } from '@angular/material/divider';
+import { OverviewComponent } from './overview/overview.component';
+import { RouterModule } from '@angular/router';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    OverviewComponent
   ],
   imports: [
     BrowserModule,
@@ -23,7 +26,8 @@ import { MatDividerModule } from '@angular/material/divider';
     MatSidenavModule,
     MatButtonModule,
     MatIconModule,
-    MatDividerModule
+    MatDividerModule,
+    RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]
