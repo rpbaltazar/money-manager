@@ -10,7 +10,6 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatDividerModule } from '@angular/material/divider';
 import { OverviewComponent } from './overview/overview.component';
-import { RouterModule } from '@angular/router';
 import { AccountComponent } from './account/account.component';
 
 
@@ -28,8 +27,7 @@ import { AccountComponent } from './account/account.component';
     MatSidenavModule,
     MatButtonModule,
     MatIconModule,
-    MatDividerModule,
-    RouterModule
+    MatDividerModule
   ],
   providers: [],
   bootstrap: [AppComponent]
