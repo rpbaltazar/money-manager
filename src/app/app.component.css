@@ -1,8 +1,6 @@
 mat-sidenav {
   margin: 16px;
   width: 200px;
-  border-right: none;
-  border-radius: 10px;
   padding: 16px;
   text-align: center;
 }
@@ -10,6 +8,7 @@ mat-sidenav {
 .content {
   margin-left: 32px;
   margin-top: 16px;
+  margin-right: 16px
 }
 
 @media screen and (max-width: 768px) {
