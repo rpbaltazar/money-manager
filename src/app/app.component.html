@@ -12,14 +12,10 @@
 
 <mat-sidenav-container>
   <mat-sidenav #sidenav="matSidenav" class="mat-elevation-z8">
-
     <img class="avatar mat-elevation-z8" src="https://robohash.org/40A.png?set=set3" />
-
     <h4 class="name">John Smith</h4>
     <p class="designation">Software Engineer</p>
-
     <mat-divider></mat-divider>
-
     <button mat-button class="menu-button" [routerLink]="'/overview'">
       <mat-icon>home</mat-icon>
       <span>Overview</span>
@@ -32,18 +28,14 @@
       <mat-icon>info</mat-icon>
       <span>About</span>
     </button>
-
     <mat-divider></mat-divider>
-
     <button mat-button class="menu-button">
       <mat-icon>help</mat-icon>
       <span>Help</span>
     </button>
-
   </mat-sidenav>
+
   <mat-sidenav-content>
-    <div class="content mat-elevation-z8">
-      <router-outlet></router-outlet>
-    </div>
+    <router-outlet></router-outlet>
   </mat-sidenav-content>
 </mat-sidenav-container>
