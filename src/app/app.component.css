@@ -8,11 +8,14 @@ mat-sidenav {
 }
 
 .content {
-  border-radius: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 2rem;
+  margin-left: 32px;
+  margin-top: 16px;
+}
+
+@media screen and (max-width: 768px) {
+  .content {
+    margin: 0;
+  }
 }
 
 mat-sidenav-container {
@@ -24,7 +27,6 @@ mat-sidenav-container {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  font-size: 1rem;
 }
 
 .menu-button mat-icon {
@@ -52,5 +54,4 @@ mat-sidenav-container {
 mat-divider {
   margin-top: 16px;
   margin-bottom: 16px;
-  background-color: rgba(255, 255, 255, 0.5);
 }
