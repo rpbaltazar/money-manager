@@ -1,9 +1,23 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import {
+  ChartComponent,
+  ApexAxisChartSeries,
+  ApexChart,
+  ApexXAxis,
+  ApexTitleSubtitle
+} from 'ng-apexcharts';
 
 export interface AccountOverview {
   name: string;
   amount: number;
   currency: string;
+}
+
+export type ChartOptions = {
+  series: ApexAxisChartSeries;
+  chart: ApexChart;
+  xaxis: ApexXAxis;
+  title: ApexTitleSubtitle;
 }
 
 const ACCOUNT_INFO: AccountOverview[] = [
@@ -20,11 +34,34 @@ const ACCOUNT_INFO: AccountOverview[] = [
   styleUrls: ['./overview.component.css']
 })
 export class OverviewComponent implements OnInit {
+  @ViewChild("chart") chart!: ChartComponent;
+  chartOptions: Partial<ChartOptions>;
+
   title = 'Overview';
   columnsToDisplay: string[] = ['Account Name', 'Amount', 'Currency'];
   dataSource = ACCOUNT_INFO;
 
-  constructor() { }
+  constructor() {
+    this.chartOptions = {
+      series: [
+        {
+          name: "Overview",
+          data: [30000, 29800, 32000, 50000]
+        }
+      ],
+      chart: {
+        height: 350,
+        type: "line"
+      },
+      title: {
+        text: 'Overview'
+      },
+      xaxis: {
+        categories: ["Jan", "Feb", "Mar"]
+      }
+    };
+    debugger;
+  }
 
   ngOnInit(): void {
   }

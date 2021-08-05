@@ -12,6 +12,7 @@ import { MatDividerModule } from '@angular/material/divider';
 import { MatTableModule } from '@angular/material/table';
 import { OverviewComponent } from './overview/overview.component';
 import { AccountComponent } from './account/account.component';
+import { NgApexchartsModule } from 'ng-apexcharts';
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import { AccountComponent } from './account/account.component';
     MatButtonModule,
     MatIconModule,
     MatDividerModule,
-    MatTableModule
+    MatTableModule,
+    NgApexchartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

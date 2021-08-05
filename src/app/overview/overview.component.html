@@ -1,3 +1,10 @@
+<apx-chart
+  [series]="chartOptions.series"
+  [chart]="chartOptions.chart"
+  [xaxis]="chartOptions.xaxis"
+  [title]="chartOptions.title"
+></apx-chart>
+
 <table mat-table [dataSource]="dataSource" class="overview-table">
   <ng-container matColumnDef="Account Name">
     <th mat-header-cell *matHeaderCellDef> Account Name </th>
